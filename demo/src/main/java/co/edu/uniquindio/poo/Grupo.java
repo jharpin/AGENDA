@@ -19,7 +19,29 @@ public class Grupo {
     }
 
     // Getters y Setters
-    // (Métodos omitidos por brevedad)
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public ArrayList<Contacto> getContactos() {
+        return contactos;
+    }
+
+    public void setContactos(ArrayList<Contacto> contactos) {
+        this.contactos = contactos;
+    }
 
     // Método para agregar un contacto al grupo
     public boolean agregarContacto(Contacto contacto) {

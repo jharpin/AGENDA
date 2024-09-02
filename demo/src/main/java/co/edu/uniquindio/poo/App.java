@@ -20,7 +20,7 @@ public class App {
         while (true) {
             mostrarMenu();
             int opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer del scanner
+            scanner.nextLine(); 
 
             switch (opcion) {
                 case 1:
@@ -43,7 +43,7 @@ public class App {
                     break;
                 case 0:
                     System.out.println("Saliendo del programa...");
-                    return; // Termina el bucle y sale del programa
+                    return; 
                 default:
                     System.out.println("Opción no válida. Intente de nuevo.");
             }

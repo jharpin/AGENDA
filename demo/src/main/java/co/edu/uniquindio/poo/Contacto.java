@@ -27,8 +27,48 @@ public class Contacto {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
     public String getTelefono() {
         return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public ArrayList<Grupo> getGrupos() {
+        return grupos;
+    }
+
+    public void setGrupos(ArrayList<Grupo> grupos) {
+        this.grupos = grupos;
     }
 
     // Método para agregar un grupo al contacto
@@ -52,23 +92,30 @@ public class Contacto {
         return Objects.hash(nombre, telefono);
     }
 
-    // Método para crear un nuevo contacto
     public static Contacto crearContacto(Scanner scanner) {
         System.out.println("Ingresa el nombre del contacto:");
-        String nombre = scanner.nextLine();
-
+        String nombre = scanner.nextLine().trim();
+    
         System.out.println("Ingresa el alias del contacto:");
-        String alias = scanner.nextLine();
-
+        String alias = scanner.nextLine().trim();
+    
         System.out.println("Ingresa la dirección del contacto:");
-        String direccion = scanner.nextLine();
-
+        String direccion = scanner.nextLine().trim();
+    
         System.out.println("Ingresa el teléfono del contacto:");
-        String telefono = scanner.nextLine();
-
+        String telefono = scanner.nextLine().trim();
+        if (telefono.isEmpty()) {
+            System.out.println("El teléfono no puede estar vacío.");
+            return null;
+        }
+    
         System.out.println("Ingresa el email del contacto:");
-        String email = scanner.nextLine();
-
+        String email = scanner.nextLine().trim();
+        if (!email.contains("@")) {
+            System.out.println("Email inválido.");
+            return null;
+        }
+    
         return new Contacto(nombre, alias, direccion, telefono, email);
     }
 
