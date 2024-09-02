@@ -10,7 +10,7 @@ public class Contacto {
     private String direccion;
     private String telefono;
     private String email;
-    private ArrayList<Grupo> grupos; // Lista de grupos a los que pertenece el contacto
+    private ArrayList<Grupo> grupos; // Lista de grupos a los que pertenece el contacto fray
 
     // Constructor
     public Contacto(String nombre, String alias, String direccion, String telefono, String email) {
@@ -80,10 +80,10 @@ public class Contacto {
 
     // Sobreescribir equals y hashCode para la igualdad por nombre y teléfono
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Contacto contacto = (Contacto) o;
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Contacto contacto = (Contacto) obj;
         return nombre.equals(contacto.nombre) && telefono.equals(contacto.telefono);
     }
 
