@@ -10,9 +10,8 @@ public class Contacto {
     private String direccion;
     private String telefono;
     private String email;
-    private ArrayList<Grupo> grupos; // Lista de grupos a los que pertenece el contacto fray
+    private ArrayList<Grupo> grupos;
 
-    // Constructor
     public Contacto(String nombre, String alias, String direccion, String telefono, String email) {
         this.nombre = nombre;
         this.alias = alias;
@@ -22,7 +21,7 @@ public class Contacto {
         this.grupos = new ArrayList<>();
     }
 
-    // Getters y Setters
+   
     public String getNombre() {
         return nombre;
     }
@@ -71,14 +70,13 @@ public class Contacto {
         this.grupos = grupos;
     }
 
-    // Método para agregar un grupo al contacto
+   
     public void agregarGrupo(Grupo grupo) {
         if (!grupos.contains(grupo)) {
             grupos.add(grupo);
         }
     }
 
-    // Sobreescribir equals y hashCode para la igualdad por nombre y teléfono
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

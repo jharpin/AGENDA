@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 public class Reunion {
     private String descripcion;
-    private String fecha; // Cambiado a String para coincidir con la entrada en App
+    private String fecha; 
     private String hora;
     private ArrayList<Contacto> asistentes;
 
-    // Constructor
     public Reunion(String descripcion, String fecha, String hora) {
         this.descripcion = descripcion;
         this.fecha = fecha;
@@ -16,7 +15,7 @@ public class Reunion {
         this.asistentes = new ArrayList<>();
     }
 
-    // Getters y Setters
+ 
     public String getDescripcion() {
         return descripcion;
     }
@@ -49,7 +48,7 @@ public class Reunion {
         this.asistentes = asistentes;
     }
 
-    // Método para agregar un contacto a la reunión
+
     public boolean agregarAsistente(Contacto contacto) {
         if (!asistentes.contains(contacto)) {
             asistentes.add(contacto);
@@ -60,7 +59,7 @@ public class Reunion {
         }
     }
 
-    // Método para eliminar un contacto de la reunión
+ 
     public boolean eliminarAsistente(Contacto contacto) {
         if (asistentes.contains(contacto)) {
             asistentes.remove(contacto);

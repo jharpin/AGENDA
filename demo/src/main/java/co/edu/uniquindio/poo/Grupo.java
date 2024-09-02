@@ -11,14 +11,14 @@ public class Grupo {
         OFICINA, FIESTA, AMIGOS, FAMILIA
     }
 
-    // Constructor
+ 
     public Grupo(String nombre, Categoria categoria) {
         this.nombre = nombre;
         this.categoria = categoria;
         this.contactos = new ArrayList<>();
     }
 
-    // Getters y Setters
+  
     public String getNombre() {
         return nombre;
     }
@@ -43,11 +43,11 @@ public class Grupo {
         this.contactos = contactos;
     }
 
-    // Método para agregar un contacto al grupo
+
     public boolean agregarContacto(Contacto contacto) {
         if (contactos.size() < 5 && !contactos.contains(contacto)) {
             contactos.add(contacto);
-            contacto.agregarGrupo(this); // Agregar grupo al contacto
+            contacto.agregarGrupo(this);
             return true;
         } else {
             System.out.println("No se puede agregar el contacto al grupo.");
@@ -55,7 +55,7 @@ public class Grupo {
         }
     }
 
-    // Método para eliminar un contacto del grupo
+   
     public boolean eliminarContacto(Contacto contacto) {
         if (contactos.contains(contacto)) {
             contactos.remove(contacto);

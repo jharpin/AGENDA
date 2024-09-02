@@ -10,7 +10,7 @@ public class App {
     private static ArrayList<Contacto> contactos = new ArrayList<>();
 
     public static void main(String[] args) {
-        // Crear algunos grupos y reuniones para pruebas
+   
         Grupo grupoAmigos = new Grupo("Amigos", Grupo.Categoria.AMIGOS);
         grupos.add(grupoAmigos);
         
